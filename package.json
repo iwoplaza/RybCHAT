@@ -1,0 +1,19 @@
+{
+  "name": "rybnik-chat",
+  "version": "0.1.0",
+  "description": "A local public chat made for a contest held in the town of Rybnik.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iwoplaza/RybinkChat.git"
+  },
+  "author": "Iwo Plaza <gobbobpl@gmail.com> (http://gobbob.net)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iwoplaza/RybinkChat/issues"
+  },
+  "homepage": "https://github.com/iwoplaza/RybinkChat#readme"
+}
