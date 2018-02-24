@@ -8,6 +8,9 @@ module.exports = {
         expressApp.get('/', function(req, res) {
             res.sendFile(ROOTPATH + '/static/index.html');
         });
+		expressApp.get('/chat', function(req, res) {
+            res.sendFile(ROOTPATH + '/static/chat/index.html');
+        });
         expressApp.get('/address', function(req, res) {
             res.sendFile(ROOTPATH + '/static/address.txt');
         });
