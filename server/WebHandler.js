@@ -22,7 +22,7 @@ module.exports = {
             console.log((new Date()) + ' Server is listening on port ' + port);
         });
 
-        module.exports.server = new WebSocketServer({
+        this.server = new WebSocketServer({
             httpServer: HTTPServer,
             autoAcceptConnections: false
         });
