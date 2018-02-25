@@ -1,1 +1,1 @@
-ws://localhost:5000
+ws://rybchat.azurewebsites.net/
