@@ -1,4 +1,4 @@
-ROOTPATH = __dirname;
+ROOTPATH = process.env.NODE_ENV || __dirname;
 
 var WebHandler = require("./server/WebHandler.js");
 var MessageHandler = require("./server/MessageHandler.js");
