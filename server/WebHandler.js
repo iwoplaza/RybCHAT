@@ -1,7 +1,7 @@
 var express = require('express');
 var expressApp = express();
-var HTTPServer = require('http').Server(expressApp);
-var WebSocketServer = require('websocket').server;
+var HTTPServer = require('http').createServer(expressApp);
+var io = require('socket.io')(HTTPServer);
 
 module.exports = {
     startServer: function(callback) {
@@ -22,12 +22,7 @@ module.exports = {
             console.log((new Date()) + ' Server is listening on port ' + port);
         });
 
-        this.server = new WebSocketServer({
-            httpServer: HTTPServer,
-            autoAcceptConnections: false
-        });
-        
-		console.error("HELLO THERE M9, WHAT ARE YOU DOING HERE...");
+        this.io = io;
 		
         callback();
     }

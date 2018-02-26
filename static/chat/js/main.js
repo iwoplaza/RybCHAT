@@ -6,8 +6,8 @@ function main() {
 
 function hello() {
 	console.log('Saying hello...');
-	WebHandler.webSocket.send(JSON.stringify({
-        header: { type: 'hello' }
+	WebHandler.socket.emit('hello', JSON.stringify({
+        text: "Hello?"
     }));
 }
 

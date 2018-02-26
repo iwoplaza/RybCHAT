@@ -5,19 +5,24 @@ var MessageHandler = require("./server/MessageHandler.js");
 WebHandler.startServer(onServerStarted);
 
 function onServerStarted() {
-	WebHandler.server.on('request', function(request) {
-        var connection = request.accept('connect', request.origin);
-        console.log('Connection from ' + request.origin + ' accepted.');
+	WebHandler.io.on('connection', function(connection){
+		console.log('User connected');
 
-        connection.on('message', function(msg) {
+        /*connection.on('message', function(msg) {
 			console.log('Recieved message...');
             if (msg.type === 'utf8') {
                 MessageHandler.decode(this, JSON.parse(msg.utf8Data));
             }
-        });
+        });*/
         
-        connection.on('close', function(e) {});
-    });
+		connection.on('hello', function(msg){
+			console.log('Message: ' + msg);
+		});
+		
+		connection.on('disconnect', function() {
+			console.log('User disconnected');
+		});
+	});
 }
 
 /*var http = require('http');
