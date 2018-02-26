@@ -20,6 +20,6 @@ WebHandler.init = function(callback) {
             WebHandler.webSocket.addEventListener('message', WebHandler.onMessage);
         }
 	}
-	xmlhttp.open("GET",'address',true);
+	xmlhttp.open("GET",'/address',true);
 	xmlhttp.send();
 }
