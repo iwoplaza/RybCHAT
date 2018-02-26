@@ -22,7 +22,7 @@ module.exports = {
             console.log((new Date()) + ' Server is listening on port ' + port);
         });
 
-        //this.io = io;
+        this.io = io;
 		
         callback();
     }

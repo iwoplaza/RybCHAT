@@ -7,7 +7,7 @@ var MessageHandler = require("./server/MessageHandler.js");
 WebHandler.startServer(onServerStarted);
 
 function onServerStarted() {
-	/*WebHandler.io.on('connection', function(connection){
+	WebHandler.io.on('connection', function(connection){
 		console.log('User connected');
         
 		connection.on('hello', function(msg){
@@ -17,7 +17,7 @@ function onServerStarted() {
 		connection.on('disconnect', function() {
 			console.log('User disconnected');
 		});
-	});*/
+	});
 }
 
 /*var http = require('http');
