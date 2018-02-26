@@ -1,7 +1,7 @@
 var express = require('express');
 var expressApp = express();
-var HTTPServer = require('http').createServer(expressApp);
-var io = require('socket.io');
+var http = require('http').createServer(expressApp);
+var io = require('socket.io')(http);
 
 module.exports = {
     startServer: function(callback) {
@@ -18,7 +18,7 @@ module.exports = {
         
         var port = process.env.PORT || 5000;
         
-        HTTPServer.listen(port, function() {
+        http.listen(port, function() {
             console.log((new Date()) + ' Server is listening on port ' + port);
         });
 
