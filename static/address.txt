@@ -1,1 +1,1 @@
-ws://rybchat.azurewebsites.net/
+wss://rybchat.azurewebsites.net/
