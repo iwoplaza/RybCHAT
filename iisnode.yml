@@ -1,5 +1,4 @@
 nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\0.10.40\node.exe"
-logDirectory: "logs/"
 debuggingEnabled: true
 devErrorsEnabled: true
 loggingEnabled: true
