@@ -1,7 +1,7 @@
 {
   "name": "rybnik-chat",
   "engines": {
-	  "node": "0.10.x"
+    "node": "0.10.x"
   },
   "version": "0.1.0",
   "description": "A local public chat made for a contest held in the town of Rybnik.",
@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/iwoplaza/RybinkChat/issues"
   },
-  "homepage": "https://github.com/iwoplaza/RybinkChat#readme"
+  "homepage": "https://github.com/iwoplaza/RybinkChat#readme",
+  "dependencies": {
+    "socket.io": "^2.0.4"
+  }
 }
