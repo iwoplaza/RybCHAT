@@ -1,6 +1,6 @@
 var express = require('express');
 var expressApp = express();
-var HTTPServer = require('http').Server(expressApp);
+var HTTPServer = require('http').createServer(expressApp);
 var io = require('socket.io');
 
 module.exports = {
