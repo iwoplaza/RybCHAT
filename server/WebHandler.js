@@ -1,7 +1,7 @@
 var express = require('express');
 var expressApp = express();
 var HTTPServer = require('http').Server(expressApp);
-var io = require('socket.io')(HTTPServer);
+//var io = require('socket.io')(HTTPServer);
 
 module.exports = {
     startServer: function(callback) {
@@ -22,7 +22,7 @@ module.exports = {
             console.log((new Date()) + ' Server is listening on port ' + port);
         });
 
-        this.io = io;
+        //this.io = io;
 		
         callback();
     }
