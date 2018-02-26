@@ -1,25 +1,25 @@
 {
-  "name": "rybnik-chat",
-  "engines": {
-    "node": "0.10.x"
-  },
-  "version": "0.1.0",
-  "description": "A local public chat made for a contest held in the town of Rybnik.",
-  "main": "main.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/iwoplaza/RybinkChat.git"
-  },
-  "author": "Iwo Plaza <gobbobpl@gmail.com> (http://gobbob.net)",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/iwoplaza/RybinkChat/issues"
-  },
-  "homepage": "https://github.com/iwoplaza/RybinkChat#readme",
-  "dependencies": {
-    "socket.io": "^2.0.4"
-  }
+	"name": "rybnik-chat",
+	"engines": {
+		"node": "0.10.x"
+	},
+	"version": "0.1.0",
+	"description": "A local public chat made for a contest held in the town of Rybnik.",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/iwoplaza/RybnikChat.git"
+	},
+	"author": "Iwo Plaza <gobbobpl@gmail.com> (http://gobbob.net)",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/iwoplaza/RybnikChat/issues"
+	},
+	"homepage": "https://github.com/iwoplaza/RybnikChat#readme",
+	"dependencies": {
+		"socket.io": "^2.0.4"
+	}
 }

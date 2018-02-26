@@ -1,7 +1,7 @@
 var express = require('express');
 var expressApp = express();
 var HTTPServer = require('http').Server(expressApp);
-var io = require('socket.io')(HTTPServer);
+var io = require('socket.io');
 
 module.exports = {
     startServer: function(callback) {
