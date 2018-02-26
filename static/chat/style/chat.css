@@ -1,0 +1,33 @@
+.chat-window {
+	background-color: #222;
+	width: 100%;
+	min-height: 200px;
+}
+
+.message-input {
+	box-sizing: border-box;
+	padding: 10px 10px;
+	width: 100%;
+	background-color: #333;
+}
+
+.message-input input[type="text"] {
+	box-sizing: border-box;
+	width: calc(100% - 100px);
+	padding: 4px 4px;
+	
+	background-color: #333;
+	border: 1px solid #aaa;
+	color: #eee;
+}
+
+.message-input input[type="button"] {
+	box-sizing: border-box;
+	float: right;
+	width: 90px;
+	padding: 4px 4px;
+	
+	background-color: #333;
+	border: 1px solid #aaa;
+	color: #eee;
+}

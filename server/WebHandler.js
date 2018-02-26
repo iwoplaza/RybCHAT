@@ -21,7 +21,7 @@ module.exports = {
         http.listen(port, function() {
             console.log((new Date()) + ' Server is listening on port ' + port);
         });
-
+		
         this.io = io;
 		
         callback();

@@ -1,11 +1,18 @@
 MessageHandler = {};
 MessageHandler.messageCallbacks = {
-	'hello': function(connection, msg) {
+	'hello': function(connection, packet) {
 		var response = {
 			header: { type: 'hello' },
 			text: "What's up man?"
 		};
-		connection.sendUTF(JSON.stringify(response));
+		connection.emit('message', JSON.stringify(response));
+	},
+	
+	'new_message': function(connection, packet) {
+		MessageHandler.webHandler.io.sockets.emit('message', JSON.stringify({
+			header: { type: 'new_message' },
+			text: packet.text
+		}));
 	}
 }
 
@@ -17,6 +24,11 @@ MessageHandler.decode = function(connection, msg) {
     }else{
         console.warn("Warning: Recieved a message with an unhandled message header (" + header.type + ")");
     }
+}
+
+MessageHandler.webHandler = null;
+MessageHandler.setWebHandler = function(webHandler) {
+	MessageHandler.webHandler = webHandler;
 }
 
 module.exports = MessageHandler;
