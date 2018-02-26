@@ -14,7 +14,7 @@ module.exports = {
         expressApp.get('/address', function(req, res) {
             res.sendFile(ROOTPATH + '/static/address.txt');
         });
-        expressApp.use('/', express.static(ROOTPATH + '/static/'));
+        expressApp.use(express.static('./static/'));
         
         var port = process.env.PORT || 5000;
         
