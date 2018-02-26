@@ -1,4 +1,4 @@
-nodeProcessCommandLine: "D:\home\site\wwwroot\bin\node.exe"
+nodeProcessCommandLine: "D:\Program Files (x86)\nodejs\8.9.4\node.exe"
 debuggingEnabled: true
 devErrorsEnabled: true
 loggingEnabled: true
