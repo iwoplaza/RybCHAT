@@ -1,5 +1,7 @@
 ROOTPATH = __dirname;
 
+console.log("Running Node.js version: " + process.version);
+
 var WebHandler = require("./server/WebHandler.js");
 var MessageHandler = require("./server/MessageHandler.js");
 WebHandler.startServer(onServerStarted);
