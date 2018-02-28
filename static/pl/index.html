@@ -6,28 +6,50 @@
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="/css/main.css">
 		<link rel="stylesheet" href="/css/buttons.css">
+		<link rel="stylesheet" href="/css/articles.css">
 	</head>
 	<body>
 		<header>
-			<div>
+			<div class="padded-container">
 				<img src="/img/logo-small.png">
 				<h1><strong>Ryb</strong>CHAT</h1>
 			</div>
 		</header>
 		<main>
-			<nav>
+			<nav id="article-nav" class="padded-container">
 				<ul>
-					<li class="active">Strona główna</li>
+					<li class="active">Witamy!</li>
 					<li>Komunikatory</li>
 					<li>Etyka czatu</li>
 				</ul>
 			</nav>
-			<div>
-				<h1>Witamy!</h1>
-				<p><strong>RybCHAT</strong> to prywatny (lecz otwarty) komunikator internetowy stworzony dla osób chcących mieć swój własny mały kącik w Internecie. Jest on "Open Source", tzn. że każdy ma dostęp do jego kodu źródłowego i może stworzyć swoją wersję <strong>RybCHAT</strong>.</p>
+			<div class="articles padded-container">
+				<div id="welcome" class="article active">
+					<h1>Witamy!</h1>
+					<p><strong>RybCHAT</strong> to prywatny (lecz otwarty) komunikator internetowy stworzony dla osób chcących mieć swój własny mały kącik w Internecie. Jest on "Open Source", tzn. że każdy ma dostęp do jego kodu źródłowego i może stworzyć swoją wersję <strong>RybCHAT</strong>.</p>
 
-				<a href="https://github.com/iwoplaza/RybCHAT" class="btn large">Zobacz źródło</a>
+					<div class="center-block"><a href="https://github.com/iwoplaza/RybCHAT" class="btn large">Zobacz źródło</a></div>
+					<input type="button" class="btn dark float-right" value="Dalej" onclick="NextArticle()">
+				</div>
+				<div id="communicators" class="article">
+					<h1>Komunikatory</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consectetur cum impedit perferendis totam minima, placeat illum itaque alias voluptates ex at recusandae, labore ab ducimus tempore atque, provident natus quaerat consequuntur laudantium excepturi! Corporis facere, quibusdam totam voluptatum praesentium?</p>
+
+					<input type="button" class="btn dark float-left" value="Wróć" onclick="PrevArticle()">
+					<input type="button" class="btn dark float-right" value="Dalej" onclick="NextArticle()">
+				</div>
+				<div id="etiquete" class="article">
+					<h1>Etyka czatu</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate consectetur cum impedit perferendis totam minima, placeat illum itaque alias voluptates ex at recusandae, labore ab ducimus tempore atque, provident natus quaerat consequuntur laudantium excepturi! Corporis facere, quibusdam totam voluptatum praesentium? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis aliquam, eius quaerat quidem corrupti unde enim consequatur dolor ipsum, ratione non quam sapiente veniam sunt soluta doloremque vero. Aperiam, aspernatur.</p>
+
+					<input type="button" class="btn dark float-left" value="Wróć" onclick="PrevArticle()">
+				</div>
 			</div>
 		</main>
+		<footer class="padded-container">Iwo Plaza, Marek Waluśkiewicz &copy; 2018</footer>
+		
+		<script src="/js/articles/article.js"></script>
+		<script src="/js/articles/articleNav.js"></script>
+		<script src="/js/articles/main.js"></script>
 	</body>
 </html>

@@ -1,0 +1,16 @@
+.articles {
+	position: relative;
+	height: 300px;
+}
+
+.article {
+	position: absolute;
+	top: 0;
+	left: 0;
+	
+	visibility: hidden;
+}
+
+.article.active {
+	visibility: visible;
+}

@@ -1,6 +1,24 @@
 .btn {
+	box-sizing: border-box;
+	margin: 0 0;
 	padding: 7px 10px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1em;
+	
 	border: 1px solid #b2b2b2;
 	border-radius: 4px;
 	background-color: #eee;
+	color: #366ec9;
+}
+
+.btn.large {
+	padding: 12px 20px;
+	font-size: 1.5em;
+}
+
+.btn.dark {
+	border-color: #444;
+	background-color: #222;
+	color: #eee;
 }
