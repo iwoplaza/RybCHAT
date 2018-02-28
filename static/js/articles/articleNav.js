@@ -3,6 +3,15 @@ class ArticleNav {
 		this.element = element;
 		this.items = element.getElementsByTagName("li");
 		
+		let i = 0;
+		for(let el of this.items) {
+			el.index = i;
+			el.onclick = () => {
+				SelectArticle(el.index);
+			};
+			i++;
+		}
+		
 		this.activeIndex = 0;
 	}
 	

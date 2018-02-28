@@ -14,3 +14,8 @@
 .article.active {
 	visibility: visible;
 }
+
+#article-nav li {
+	cursor: pointer;
+	user-select: none;
+}
