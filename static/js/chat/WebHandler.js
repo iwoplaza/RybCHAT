@@ -9,7 +9,6 @@ WebHandler.onMessage = function(msg) {
 WebHandler.init = function(callback) {
 	WebHandler.socket = io();
 	WebHandler.socket.on('connect', function(data) {
-		WebHandler.socket.emit('join', 'Hello World from client');
 		WebHandler.socket.on('message', WebHandler.onMessage);
 		callback();
 	});

@@ -1,3 +1,7 @@
+body {
+	font-family: sans-serif;
+}
+
 .chat-window {
 	background-color: #222;
 	width: 100%;
@@ -30,4 +34,27 @@
 	background-color: #333;
 	border: 1px solid #aaa;
 	color: #eee;
+}
+
+.join-window {
+	border: 1px solid #222;
+	padding: 20px 20px;
+	text-align: center;
+}
+
+.message-feed {
+	padding: 20px 20px;
+}
+
+.message-group {
+	color: #ddd;
+	padding: 5px 0px;
+}
+
+.message-group .chatter {
+	font-weight: bold;
+}
+
+.message {
+	margin-left: 10px;
 }

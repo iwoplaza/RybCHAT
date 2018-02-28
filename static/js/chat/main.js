@@ -4,7 +4,17 @@ var uiChatWindow;
 function main() {
 	console.log('[RybCHAT] Connected to the server.');
 	
-	uiChatWindow = new UIChatWindow();
+	uiJoin = new UIJoin();
+	uiChatWindow = null;
+	
+	document.addEventListener('keydown', (e) => {
+		let keyCode = e.keyCode;
+		
+		if(keyCode == 13) {
+			ChatManager.send(uiChatWindow.uiMessageInput.elementTextField.value + '');
+			uiChatWindow.uiMessageInput.elementTextField.value = "";
+		}
+	});
 }
 
 function hello() {

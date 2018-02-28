@@ -1,5 +1,0 @@
-class UIMessageGroup {
-	constructor(messages) {
-		
-	}
-}

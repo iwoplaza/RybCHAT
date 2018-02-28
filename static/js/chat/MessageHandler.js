@@ -4,9 +4,22 @@ MessageHandler.messageCallbacks = {
 		console.log("Got a response: " + packet.text);
 	},
 	
+	'new_chatter': function(packet) {
+		var chatter = Chatter.list[packet.name];
+		if(chatter != undefined)
+			return;
+		Chatter.addNewChatter(packet.name);
+	},
+	
 	'new_message': function(packet) {
-		var chatter = new Chatter();
+		var chatter = Chatter.list[packet.name];
+		if(chatter == undefined)
+			return;
 		ChatManager.recieveMessage(chatter, packet.text)
+	},
+	
+	'init': function(packet) {
+		ChatManager.init(packet);
 	}
 }
 

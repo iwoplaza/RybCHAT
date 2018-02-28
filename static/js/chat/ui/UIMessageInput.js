@@ -14,7 +14,8 @@ class UIMessageInput {
 		this.elementSendButton.setAttribute('value', 'Send');
 		
 		this.elementSendButton.addEventListener('click', () => {
-			ChatManager.send(this.elementTextField.value);
+			ChatManager.send(this.elementTextField.value + '');
+			this.elementTextField.value = "";
 		});
 	}
 }
