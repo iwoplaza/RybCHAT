@@ -1,6 +1,7 @@
 class ChatMessage {
 	constructor(chatter, text) {
 		this.chatter = chatter;
-		this.text = text;
+		// Protecting against HTML and JavaScript injections.
+		this.text = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");;
 	}
 }

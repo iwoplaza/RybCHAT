@@ -6,7 +6,7 @@ var io = require('socket.io')(http);
 module.exports = {
     startServer: function(callback) {
         expressApp.get('/', function(req, res) {
-            res.sendFile(ROOTPATH + '/static/index.html');
+            res.redirect('/pl');
         });
 		expressApp.get('/chat', function(req, res) {
             res.sendFile(ROOTPATH + '/static/chat/index.html');

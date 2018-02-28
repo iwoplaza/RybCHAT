@@ -6,15 +6,6 @@ function main() {
 	
 	uiJoin = new UIJoin();
 	uiChatWindow = null;
-	
-	document.addEventListener('keydown', (e) => {
-		let keyCode = e.keyCode;
-		
-		if(keyCode == 13) {
-			ChatManager.send(uiChatWindow.uiMessageInput.elementTextField.value + '');
-			uiChatWindow.uiMessageInput.elementTextField.value = "";
-		}
-	});
 }
 
 function hello() {

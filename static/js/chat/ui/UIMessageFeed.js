@@ -5,6 +5,8 @@ class UIMessageFeed {
 		this.element = document.createElement('div');
 		chatWindow.element.appendChild(this.element);
 		this.element.classList.add('message-feed');
+		
+		this.scrollInterval = null;
 	}
 	
 	addMessage(message) {
@@ -23,5 +25,26 @@ class UIMessageFeed {
 			group.feed = this;
 			this.groups.push(group);
 		}
+		
+		this.scrollTo(this.element.scrollHeight);
+	}
+	
+	scrollTo(target) {
+		if(this.scrollInterval != null)
+			clearInterval(this.scrollInterval);
+		
+		this.scrollInterval = setInterval(() => {
+			performScrolling(this, target);
+		}, 50);
+	}
+}
+
+function performScrolling(feed, target) {
+	const margin = 0.5;
+
+	feed.element.scrollTop += ((feed.element.scrollHeight-feed.element.offsetHeight) - feed.element.scrollTop) * 0.2;
+	
+	if(Math.abs(feed.element.scrollTop - target) <= margin) {
+		clearInterval(feed.scrollInterval);
 	}
 }

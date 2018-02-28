@@ -1,11 +1,6 @@
-body {
-	font-family: sans-serif;
-}
-
 .chat-window {
 	background-color: #222;
 	width: 100%;
-	min-height: 200px;
 }
 
 .message-input {
@@ -15,10 +10,13 @@ body {
 	background-color: #333;
 }
 
-.message-input input[type="text"] {
+.message-input input {
 	box-sizing: border-box;
-	width: calc(100% - 100px);
 	padding: 4px 4px;
+}
+
+.message-input input[type="text"] {
+	width: calc(100% - 100px);
 	
 	background-color: #333;
 	border: 1px solid #aaa;
@@ -44,6 +42,8 @@ body {
 
 .message-feed {
 	padding: 20px 20px;
+	height: 400px;
+	overflow-y: scroll;
 }
 
 .message-group {

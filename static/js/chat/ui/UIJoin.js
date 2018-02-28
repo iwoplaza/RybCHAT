@@ -6,18 +6,29 @@ class UIJoin {
 		this.element.classList.add('join-window');
 		
 		this.nameInputElement = document.createElement('input');
-		this.nameInputElement.setAttribute('type', 'text');
 		this.element.appendChild(this.nameInputElement);
+		this.nameInputElement.setAttribute('type', 'text');
+		this.nameInputElement.addEventListener('keydown', (e) => {
+			let keyCode = e.keyCode;
+
+			if(keyCode == 13) {
+				this.sendJoinRequest();
+			}
+		});
 		
 		this.joinButton = document.createElement('button');
 		this.element.appendChild(this.joinButton);
 		this.joinButton.innerHTML = 'Join';
 		this.joinButton.onclick = () => {
-			WebHandler.socket.emit('message', JSON.stringify({
-				header: { type: 'join_request' },
-				name: this.nameInputElement.value
-			}));
+			this.sendJoinRequest();
 		}
+	}
+	
+	sendJoinRequest() {
+		WebHandler.socket.emit('message', JSON.stringify({
+			header: { type: 'join_request' },
+			name: this.nameInputElement.value
+		}));
 	}
 	
 	destroy() {
