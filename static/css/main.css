@@ -63,7 +63,6 @@ main > div h1 {
 	margin: 10px 0;
 }
 
-
 main table td {
 	padding: 10px 10px;
 }
@@ -126,4 +125,25 @@ a:hover {
 	text-decoration: none;
 	color: #6998e5;
 	font-weight: bold;
+}
+
+@media only screen and (max-width: 600px) {
+	.padded-container {
+		width: 80%;
+	}
+	
+	main nav li {
+		display: block;
+		text-align: center;
+		border-bottom: 1px solid #333;
+		padding: 4px 0px;
+	}
+	
+	main table {
+		display: block;
+	}
+	
+	main table td {
+		display: block;
+	}
 }
