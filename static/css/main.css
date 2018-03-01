@@ -63,6 +63,11 @@ main > div h1 {
 	margin: 10px 0;
 }
 
+
+main table td {
+	padding: 10px 10px;
+}
+
 main nav {
 	padding: 10px 0px;
 	border-bottom: 1px solid #eee;
