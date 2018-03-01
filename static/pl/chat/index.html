@@ -18,14 +18,24 @@
 		
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/language.css">
 		<link rel="stylesheet" href="/css/chat.css">
 	</head>
 	<body>
 		<header>
-			<a href="../" class="padded-container">
-				<img src="/img/logo-small.png">
-				<h1><strong>Ryb</strong>CHAT</h1>
-			</a>
+			<div class="padded-container">
+				<a href="../" >
+					<img src="/img/logo-small.png">
+					<h1><strong>Ryb</strong>CHAT</h1>
+				</a>
+				<div id="language-picker">
+					<img src="/img/flag-poland.png" alt="en">
+					<ul>
+						<li><a href="../../en/chat"><img src="/img/flag-usa.png" alt="en"></a></li>
+						<li><a href="#"><img src="/img/flag-poland.png" alt="pl"></a></li>
+					</ul>
+				</div>
+			</div>
 		</header>
 		<main>
 			<div id="chat-container" class="padded-container">
