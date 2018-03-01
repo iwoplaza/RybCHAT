@@ -127,6 +127,16 @@ a:hover {
 	font-weight: bold;
 }
 
+@media only screen and (max-width: 1200px) {
+	main table {
+		display: block;
+	}
+	
+	main table td {
+		display: block;
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	.padded-container {
 		width: 80%;
@@ -137,13 +147,5 @@ a:hover {
 		text-align: center;
 		border-bottom: 1px solid #333;
 		padding: 4px 0px;
-	}
-	
-	main table {
-		display: block;
-	}
-	
-	main table td {
-		display: block;
 	}
 }
