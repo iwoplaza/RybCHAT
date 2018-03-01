@@ -40,11 +40,13 @@ class UIMessageFeed {
 }
 
 function performScrolling(feed, target) {
-	const margin = 0.5;
+	const margin = 5;
 
 	feed.element.scrollTop += ((feed.element.scrollHeight-feed.element.offsetHeight) - feed.element.scrollTop) * 0.2;
 	
-	if(Math.abs(feed.element.scrollTop - target) <= margin) {
+	let distance = Math.abs(feed.element.scrollTop - target) - feed.element.offsetHeight;
+	
+	if(distance <= margin) {
 		clearInterval(feed.scrollInterval);
 	}
 }
