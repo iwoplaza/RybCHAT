@@ -16,7 +16,6 @@ ChatManager.recieveMessage = (chatter, text) => {
 ChatManager.init = (packet) => {
 	Chatter.initList(packet.chatters);
 	uiChatWindow = new UIChatWindow();
-	uiJoin.destroy();
 	
 	for(let entry of packet.history) {
 		let fakeChatter = new Chatter(entry.name);

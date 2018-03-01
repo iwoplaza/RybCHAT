@@ -2,7 +2,10 @@ class UIChatWindow {
 	constructor() {
 		this.element = document.createElement('div');
 		this.element.classList.add('chat-window');
-		document.body.appendChild(this.element);
+		
+		var chatContainer = document.getElementById('chat-container');
+		chatContainer.innerHTML = '';
+		chatContainer.appendChild(this.element);
 		
 		this.uiMessageFeed = new UIMessageFeed(this);
 		this.uiMessageInput = new UIMessageInput(this);

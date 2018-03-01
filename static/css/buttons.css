@@ -22,3 +22,8 @@
 	background-color: #222;
 	color: #eee;
 }
+
+.btn.dark:hover {
+	cursor: pointer;
+	background-color: #272727;
+}

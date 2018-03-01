@@ -1,7 +1,11 @@
 class UIJoin {
 	constructor() {
 		this.element = document.createElement('div');
-		document.body.appendChild(this.element);
+		
+		var chatContainer = document.getElementById('chat-container');
+		chatContainer.innerHTML = '';
+		chatContainer.appendChild(this.element);
+		
 		this.element.innerHTML = "<h1>Join the RybCHAT!</h1>";
 		this.element.classList.add('join-window');
 		
@@ -29,9 +33,5 @@ class UIJoin {
 			header: { type: 'join_request' },
 			name: this.nameInputElement.value
 		}));
-	}
-	
-	destroy() {
-		document.body.removeChild(this.element);
 	}
 }
