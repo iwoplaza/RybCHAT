@@ -5,6 +5,9 @@ var animationInTimeout = null;
 var animationOutTimeout = null;
 
 function SelectArticle(index) {
+	if(index == activeArticle.index)
+		return;
+	
 	if(index < 0 || index >= articles.length) {
 		return;
 	}
