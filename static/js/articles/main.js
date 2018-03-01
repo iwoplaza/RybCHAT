@@ -1,13 +1,20 @@
 var articles = [];
 var activeArticle = null;
 var articleNav = null;
+var animationInTimeout = null;
+var animationOutTimeout = null;
 
 function SelectArticle(index) {
 	if(index < 0 || index >= articles.length) {
 		return;
 	}
 	
-	let direction = index > activeArticle.index;
+	let direction = index < activeArticle.index;
+	
+	if(animationOutTimeout != null)
+		clearTimeout(animationOutTimeout);
+	if(animationInTimeout != null)
+		clearTimeout(animationInTimeout);
 	
 	if(activeArticle != null) {
 		if(direction)
@@ -71,7 +78,7 @@ function AnimateFromLeft(article, progress)
 	article.element.style.left = '' + (t-1)*200 + 'px';
 	
 	if(progress < 1)
-		setTimeout(() => {
+		animationInTimeout = setTimeout(() => {
 			AnimateFromLeft(article, progress + animationDelta);
 		},15);
 }
@@ -88,7 +95,7 @@ function AnimateToRight(article, progress)
 	article.element.style.left = '' + (t)*100 + 'px';
 	
 	if(progress < 1)
-		setTimeout(() => {
+		animationOutTimeout = setTimeout(() => {
 			AnimateToRight(article, progress + animationDelta);
 		},15);
 	else
@@ -107,7 +114,7 @@ function AnimateFromRight(article, progress)
 	article.element.style.left = '' + (-t+1)*200 + 'px';
 	
 	if(progress < 1)
-		setTimeout(() => {
+		animationInTimeout = setTimeout(() => {
 			AnimateFromRight(article, progress + animationDelta);
 		},15);
 }
@@ -124,7 +131,7 @@ function AnimateToLeft(article, progress)
 	article.element.style.left = '' + (-t)*100 + 'px';
 	
 	if(progress < 1)
-		setTimeout(() => {
+		animationOutTimeout = setTimeout(() => {
 			AnimateToLeft(article, progress + animationDelta);
 		},15);
 	else
