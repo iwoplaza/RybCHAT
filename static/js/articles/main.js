@@ -6,14 +6,23 @@ function SelectArticle(index) {
 	if(index < 0 || index >= articles.length) {
 		return;
 	}
-		
+	
+	let direction = index > activeArticle.index;
+	
 	if(activeArticle != null) {
-		activeArticle.Deactivate();
+		if(direction)
+			AnimateToRight(activeArticle, 0);
+		else
+			AnimateToLeft(activeArticle, 0);
 	}
 	
 	activeArticle = articles[index];
 	activeArticle.SetActive();
 	articleNav.SetActive(index);
+	if(direction)
+		AnimateFromLeft(activeArticle, 0);
+	else
+		AnimateFromRight(activeArticle, 0);
 }
 
 function NextArticle() {
@@ -48,6 +57,78 @@ function Setup() {
 	
 	var articleNavElement = document.getElementById('article-nav');
 	articleNav = new ArticleNav(articleNavElement);
+}
+
+function AnimateFromLeft(article, progress)
+{
+	const animationDelta = 0.02;
+	
+	if(progress >= 1)
+		progress = 1;
+	
+	let t = 1-Math.pow(1-progress, 3);
+	article.element.style.opacity = '' + (t);
+	article.element.style.left = '' + (t-1)*200 + 'px';
+	
+	if(progress < 1)
+		setTimeout(() => {
+			AnimateFromLeft(article, progress + animationDelta);
+		},15);
+}
+
+function AnimateToRight(article, progress)
+{
+	const animationDelta = 0.1;
+	
+	if(progress >= 1)
+		progress = 1;
+	
+	let t = 1-Math.pow(1-progress, 3);
+	article.element.style.opacity = '' + (1 - t);
+	article.element.style.left = '' + (t)*100 + 'px';
+	
+	if(progress < 1)
+		setTimeout(() => {
+			AnimateToRight(article, progress + animationDelta);
+		},15);
+	else
+		article.Deactivate();
+}
+
+function AnimateFromRight(article, progress)
+{
+	const animationDelta = 0.02;
+	
+	if(progress >= 1)
+		progress = 1;
+	
+	let t = 1-Math.pow(1-progress, 3);
+	article.element.style.opacity = '' + (t);
+	article.element.style.left = '' + (-t+1)*200 + 'px';
+	
+	if(progress < 1)
+		setTimeout(() => {
+			AnimateFromRight(article, progress + animationDelta);
+		},15);
+}
+
+function AnimateToLeft(article, progress)
+{
+	const animationDelta = 0.1;
+	
+	if(progress >= 1)
+		progress = 1;
+	
+	let t = 1-Math.pow(1-progress, 3);
+	article.element.style.opacity = '' + (1 - t);
+	article.element.style.left = '' + (-t)*100 + 'px';
+	
+	if(progress < 1)
+		setTimeout(() => {
+			AnimateToLeft(article, progress + animationDelta);
+		},15);
+	else
+		article.Deactivate();
 }
 
 Setup();
