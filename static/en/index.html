@@ -2,23 +2,33 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Strona główna - RybCHAT</title>
+		<title>Home - RybCHAT</title>
 		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 		<link rel="stylesheet" href="/css/main.css">
+		<link rel="stylesheet" href="/css/language.css">
 		<link rel="stylesheet" href="/css/buttons.css">
 		<link rel="stylesheet" href="/css/articles.css">
 	</head>
 	<body>
 		<header>
-			<a href="#" class="padded-container">
-				<img src="/img/logo-small.png">
-				<h1><strong>Ryb</strong>CHAT</h1>
-			</a>
+			<div class="padded-container">
+				<a href="#" >
+					<img src="/img/logo-small.png">
+					<h1><strong>Ryb</strong>CHAT</h1>
+				</a>
+				<div id="language-picker">
+					<img src="/img/flag-usa.png" alt="en">
+					<ul>
+						<li><a href="#"><img src="/img/flag-usa.png" alt="en"></a></li>
+						<li><a href="../pl"><img src="/img/flag-poland.png" alt="pl"></a></li>
+					</ul>
+				</div>
+			</div>
 		</header>
 		<main>
 			<nav id="article-nav" class="padded-container">
 				<ul>
-					<li class="active">Witamy!</li>
+					<li class="active">Welcome!</li>
 					<li>Online chat</li>
 					<li>History</li>
 					<li>Etyka czatu</li>
