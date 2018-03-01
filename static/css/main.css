@@ -100,7 +100,8 @@ footer > div {
 
 .float-left { float: left; }
 .float-right { float: right; }
-.center-block { text-align: center; width: 100%; display: block; margin-left: auto; margin-right: auto; }
+.center-block { box-sizing: border-box; text-align: center; width: 100%; height: auto; display: block; margin-left: auto; margin-right: auto; }
+.tall-block { height: 64px; }
 
 p {
 	font-size: 1.3em;
