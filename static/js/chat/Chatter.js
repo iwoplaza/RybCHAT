@@ -1,6 +1,7 @@
 class Chatter {
 	constructor(name) {
-		this.name = name;
+		// Protecting against HTML and JavaScript injections.
+		this.name = name.replace(/</g, "&lt;").replace(/>/g, "&gt;");
 	}
 }
 
